@@ -67,7 +67,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 self.weatherDescription.text = weatherData.weather?[0].description ?? "No description"
                 self.weatherTemperature.text = "\(Int((weatherData.main?.temp ?? 273.15) - 273.15))°C"
                 self.Humidity.text = "Humidity: \(weatherData.main?.humidity ?? 0)%"
-                self.windSpeed.text = "Wind Speed: \(weatherData.wind?.speed ?? 0) km/h"
+                self.windSpeed.text = "Wind Speed: \((weatherData.wind?.speed ?? 0) * 3.6) km/h"
                 self.WeatherIcon(icon: weatherData.weather?[0].icon)
                 
             }
